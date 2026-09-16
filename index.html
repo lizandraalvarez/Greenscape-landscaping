@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenScape Gardening & Landscaping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="index.html">GreenScape</a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#estimate">Estimate</a>
+      <a href="pages/about.html">About</a><a class="button small" href="pages/contact.html">Request a Quote</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Gardening • Landscaping • Lawn Care</p>
+        <h1>Outdoor spaces made greener, cleaner, and easier to enjoy.</h1>
+        <p>GreenScape provides dependable lawn care, garden design, and tree maintenance for homes and businesses.</p>
+        <div class="actions"><a class="button" href="#estimate">Estimate My Service</a><a class="button secondary" href="#services">View Services</a></div>
+      </div>
+      <div class="hero-card" aria-label="GreenScape service highlights">
+        <span>✓ Residential & commercial</span><span>✓ Eco-conscious options</span><span>✓ Clear service estimates</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section container">
+    <p class="eyebrow">Our services</p><h2>Choose the care your property needs</h2>
+    <div class="filter-row" aria-label="Filter services">
+      <button class="filter active" data-category="all">All</button>
+      <button class="filter" data-category="lawn">Lawn Care</button>
+      <button class="filter" data-category="garden">Garden Design</button>
+      <button class="filter" data-category="tree">Tree Care</button>
+    </div>
+    <div id="serviceCards" class="services-container"></div>
+  </section>
+
+  <section id="estimate" class="section surface">
+    <div class="container estimate-grid">
+      <div><p class="eyebrow">Interactive quote estimator</p><h2>Plan before you contact us</h2>
+      <p>Select a service, enter an estimated yard size, and add optional services. The estimate updates instantly.</p></div>
+      <form id="estimateForm" class="panel">
+        <label for="service">Service</label>
+        <select id="service"><option value="lawn">Lawn Care</option><option value="garden">Garden Design</option><option value="tree">Tree Maintenance</option></select>
+        <label for="sqft">Estimated yard size (sq. ft.)</label>
+        <input id="sqft" type="number" min="100" value="1000">
+        <label class="check"><input id="organic" type="checkbox"> Organic fertilization (+$35)</label>
+        <label class="check"><input id="sprinkler" type="checkbox"> Sprinkler check (+$45)</label>
+        <div class="total">Estimated Total <strong id="total">$120.00</strong></div>
+        <button type="button" id="savePreference" class="button">Save Preference</button>
+        <p id="saveMessage" class="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="cta"><div><p class="eyebrow">Ready for a greener space?</p><h2>Tell us what you need.</h2></div>
+    <a class="button" href="pages/contact.html">Contact GreenScape</a></div>
+  </section>
+</main>
+<footer><div class="container">© 2026 GreenScape Gardening & Landscaping Services</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
